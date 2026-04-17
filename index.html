@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>《馬可福音》第9章：神國本質與門徒生活</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft JhengHei', sans-serif;
+        }
+        
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #1a252f;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            padding-bottom: 50px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            border-bottom-left-radius: 0 0 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M0,0 L100,0 L100,100 Z" fill="white" fill-opacity="0.05"/></svg>');
+            background-size: cover;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            color: #ecf0f1;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .verse {
+            font-style: italic;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 12px 20px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 10px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .section {
+            background-color: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section:hover {
+            transform: translateY(-5px);
+        }
+        
+        .section-title {
+            color: var(--primary);
+            border-left: 5px solid var(--secondary);
+            padding-left: 15px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 12px;
+            color: var(--secondary);
+        }
+        
+        .highlight {
+            background-color: rgba(52, 152, 219, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid var(--secondary);
+        }
+        
+        .two-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .column {
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .column-1 {
+            background-color: rgba(231, 76, 60, 0.05);
+            border: 1px solid rgba(231, 76, 60, 0.2);
+        }
+        
+        .column-2 {
+            background-color: rgba(52, 152, 219, 0.05);
+            border: 1px solid rgba(52, 152, 219, 0.2);
+        }
+        
+        .column h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .column h3 i {
+            margin-right: 10px;
+        }
+        
+        ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .concept-box {
+            background-color: rgba(39, 174, 96, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid var(--success);
+        }
+        
+        .concept-title {
+            font-weight: bold;
+            color: var(--success);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .three-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .point {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            border-top: 4px solid transparent;
+        }
+        
+        .point-1 {
+            border-top-color: var(--secondary);
+        }
+        
+        .point-2 {
+            border-top-color: var(--warning);
+        }
+        
+        .point-3 {
+            border-top-color: var(--success);
+        }
+        
+        .point h3 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .point-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background-color: var(--secondary);
+            color: white;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        .point-2 .point-number {
+            background-color: var(--warning);
+        }
+        
+        .point-3 .point-number {
+            background-color: var(--success);
+        }
+        
+        .summary {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 12px;
+            padding: 30px;
+            margin-top: 40px;
+            text-align: center;
+            border: 1px solid #dee2e6;
+        }
+        
+        .summary h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .summary-points {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .summary-point {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            width: 280px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .scripture-ref {
+            font-style: italic;
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+        
+        .key-term {
+            display: inline-block;
+            background-color: rgba(52, 152, 219, 0.1);
+            color: var(--secondary);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            margin: 0 2px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #666;
+            font-size: 0.9rem;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+        
+        @media (max-width: 768px) {
+            .two-columns, .three-points, .summary-points {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>《馬可福音》第9章</h1>
+            <p class="subtitle">看似零散的事件，其實是一個關於「神國本質」與「門徒生活」的完整畫面</p>
+            <div class="verse">「耶穌又對他們說：『我實在告訴你們，站在這裡的，有人在沒嘗死味以前，必要看見神的國大有能力臨到。』」<br>— 馬可福音 9:1</div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="main-content">
+            <section class="section">
+                <h2 class="section-title"><i class="fas fa-kingdom"></i> 一、神國的具體化</h2>
+                <p>「神國」從抽象變得具體，展現了「<span class="key-term">已然未然</span>」(Already and Not Yet) 的神國觀。</p>
+                
+                <div class="highlight">
+                    <p>耶穌在9:1預言「有人在沒嘗死味以前，看見神的國大能臨到」。隨後的經文立刻透過「<strong>視覺（榮耀）</strong>」與「<strong>聽覺（權能）</strong>」將這份屬靈的抽象概念，實實在在地彰顯在門徒眼前。</p>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2 class="section-title"><i class="fas fa-cross"></i> 二、救恩的完整畫面</h2>
+                <p>「登山變相」與「趕鬼救人」結合，呈現救恩的完整畫面，體現了<span class="key-term">救贖論</span>(Soteriology)。</p>
+                
+                <div class="two-columns">
+                    <div class="column column-1">
+                        <h3><i class="fas fa-mountain"></i> 1. 登山變相：神國的本體與榮耀</h3>
+                        <ul>
+                            <li>耶穌的變相不是「神變得有榮耀」，而是祂短暫地撕開肉身的幔子，彰顯祂創世以來原有的榮光。</li>
+                            <li>這印證了《希伯來書》1:3 耶穌是「神榮耀所發的光輝」。</li>
+                            <li>這讓門徒提前預覽了神國最終極、最榮耀的完成狀態。</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="column column-2">
+                        <h3><i class="fas fa-fist-raised"></i> 2. 趕鬼救人：神國的權能與爭戰</h3>
+                        <ul>
+                            <li>耶穌從「極度榮耀」下到「極度痛苦」的人間，這正是<span class="key-term">基督虛己</span>(Kenosis) 的體現（《腓立比書》2:6-8）。</li>
+                            <li>神國的臨到必然伴隨著對撒但國度的瓦解。</li>
+                            <li>耶穌趕鬼正是神國大能的彰顯，正如耶穌在其他地方所說：「我若靠著神的能力趕鬼，這就是神的國臨到你們了。」（《路加福音》11:20）。</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2 class="section-title"><i class="fas fa-heart"></i> 三、神國子民的生命重塑</h2>
+                <p>（爭大、門戶、絆倒、和睦）正是「天國價值觀」與「世界價值觀」的劇烈碰撞。</p>
+                
+                <div class="three-points">
+                    <div class="point point-1">
+                        <h3><span class="point-number">1</span> 爭大與門戶之見：罪性的外顯</h3>
+                        <p>在始祖墮落後，人就渴望「如神一樣」至高無上。門徒的「爭大」與「排外（門戶之見）」，本質上都是出於自我膨脹與驕傲。</p>
+                        <p>耶穌用「接待小孩子」來顛覆這一切。在當時的社會，小孩子毫無社會地位。接待小孩子，意味著放下利益交換與虛榮，這才是神國的倫理。</p>
+                    </div>
+                    
+                    <div class="point point-2">
+                        <h3><span class="point-number">2</span> 處理絆倒：神國的決絕與代價</h3>
+                        <p>爭大的「根源」，罪是有傳染性與毀滅性的，會絆倒自己，也會絆倒那些在信仰上像「小子」一樣軟弱的人。</p>
+                        <p>耶穌用極其誇張的比喻（砍手、挖眼）來表達對待罪惡必須採取最激進、最徹底的切割態度。進入神國的代價，要求我們治死老我。</p>
+                    </div>
+                    
+                    <div class="point point-3">
+                        <h3><span class="point-number">3</span> 和睦與鹽：神國的終極生活狀態</h3>
+                        <p>「鹽」與「爭大」的對比，在舊約中，鹽代表「立約」與「不廢壞」（《民數記》18:19 的鹽約）。</p>
+                        <p>鹽有「防腐」與「調和」的作用。當門徒彼此相爭時，就是失去了鹽味。只有當各人願意像鹽一樣「消融自己」（放下爭大之心），才能在團體中發揮調和的作用，達致真正的彼此和睦。</p>
+                    </div>
+                </div>
+                
+                <div class="concept-box">
+                    <div class="concept-title">📌 核心概念：天國價值觀 vs. 世界價值觀</div>
+                    <p>耶穌透過一系列教導，徹底顛覆門徒對權力、地位和成功的世俗理解，建立以謙卑、捨己和服事為核心的天國價值觀。</p>
+                </div>
+            </section>
+            
+            <section class="summary">
+                <h2><i class="fas fa-star"></i> 總結：馬可福音第9章的完整信息</h2>
+                <p>馬可福音第9章通過一系列看似獨立的事件，完整呈現了神國的本質以及神國子民應有的生活樣式。</p>
+                
+                <div class="summary-points">
+                    <div class="summary-point">
+                        <h3>上半章：神國的彰顯</h3>
+                        <p>讓我們看見：<strong>神國的君王是誰</strong>（榮耀的基督），以及<strong>祂來做什麼</strong>（勝過黑暗，施行拯救）。</p>
+                        <div class="scripture-ref">(可9:2-29)</div>
+                    </div>
+                    
+                    <div class="summary-point">
+                        <h3>下半章：神國的生活</h3>
+                        <p>讓我們看見：<strong>神國的子民該如何生活</strong>（以謙卑、純潔、和睦的生命來彰顯神國）。</p>
+                        <div class="scripture-ref">(可9:30-50)</div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 30px; padding: 20px; background-color: white; border-radius: 8px; border-left: 4px solid var(--primary);">
+                    <p><strong>整體信息：</strong> 神國不僅是未來將要完全實現的國度，也是現在就可以透過耶穌基督的救恩和聖靈的大能經歷的現實。門徒被呼召以與世界價值觀截然不同的方式生活，見證神國的臨在。</p>
+                </div>
+            </section>
+        </div>
+        
+        <footer>
+            <p>© 2026 馬可福音第9章分享</p>
+            <p style="margin-top: 5px; font-size: 0.8rem;">經文引用自《聖經》和合本</p>
+        </footer>
+    </div>
+
+    <script>
+        // 簡單的動畫效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section');
+            
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            sections.forEach(section => {
+                section.style.opacity = 0;
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(section);
+            });
+            
+            // 點擊章節標題時添加視覺回饋
+            const sectionTitles = document.querySelectorAll('.section-title');
+            sectionTitles.forEach(title => {
+                title.addEventListener('click', function() {
+                    this.style.color = this.style.color === 'rgb(231, 76, 60)' ? '' : 'rgb(231, 76, 60)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
